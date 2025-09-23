@@ -1,2 +1,2 @@
-# daniel-garcia
-personal website
+This is my first iteration of building a presonal website using svelte.
+This should be considered a living project for this is the the final iteration of my webstie and I hope to expand and display the skills I gain throught the year.
