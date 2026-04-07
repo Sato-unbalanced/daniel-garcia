@@ -134,17 +134,16 @@
 
     <div class="skills">
       <div class="page-header">
-      <p>What I work with</p>
-      <h2>My <span>Skills</span></h2>
+        <h2>My <span>Skills</span></h2>
       </div>
       <div class="grid" id="grid">
-      {#each skillCategories as skillCategory}
-        <Skills
-          category={skillCategory.category}
-          icon={skillCategory.icon}
-          skills={skillCategory.skills}
-        ></Skills>
-      {/each}
+        {#each skillCategories as skillCategory}
+          <Skills
+            category={skillCategory.category}
+            icon={skillCategory.icon}
+            skills={skillCategory.skills}
+          ></Skills>
+        {/each}
       </div>
     </div>
   </section>
@@ -164,7 +163,8 @@
   </section>
 
   <section id="Projects">
-    {#each projects as project}
+    <div class="project">
+      {#each projects as project}
       <Project
       title={project.title}
       description={project.description}
@@ -175,6 +175,7 @@
       >
       </Project>
     {/each}
+    </div> 
   </section>
 
   <section id="Blog">
@@ -184,29 +185,18 @@
 </main>
 
 <style>
-  main
-  {
-    padding-top: 4rem;
+  main{
     height: 100%;
     width: 100%;
-    font-size: 2rem;
+    font-size: 28px;
   }
   /* ── Header ── */
   .page-header {
     margin-bottom: 3rem;
   }
-
   .skills{
     width:100%;
   }
-  .page-header p {
-    font-size: 0.7rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: #555;
-    margin-bottom: 0.5rem;
-  }
-
   .page-header h2 {
     font-family: 'Syne', sans-serif;
     font-size: 2.4rem;
@@ -214,11 +204,9 @@
     color: #f0f0f0;
     letter-spacing: -0.03em;
   }
-
   .page-header h2 span {
     color: #7fff6e;
   }
-
   /* ── Grid ── */
   .grid {
     padding: 1.5rem;
@@ -226,27 +214,23 @@
     grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
     gap: 1.25rem;
   }
-  h1
-  {
+  h1{
     font-size: 3rem;
   }
-  .header
-  {
+  .header h1{
+    padding-left: 20px;
+    text-align: left;
+  }
+  .header{
     display: grid;
     grid-template-columns: auto auto;
   }
-  nav
-  {
+  nav{
     display: grid;
     grid-template-columns: auto auto auto auto ;
     place-items: center;
   }  
-  nav a
-  {
-    font-size: 2rem;
-  }
-  .schools
-  {
+  .schools{
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
@@ -260,22 +244,17 @@
   .logo:hover {
     filter: drop-shadow(0 0 2em #64b9ffaa);
   }
-
   .logo.github:hover {
     filter: drop-shadow(0 0 2em #5900ffaa);
   }
-  
-  p
-  {
+  p{
     align-items: center;
   }
-  .link
-  {
+  .link{
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  section
-  {
+  section{
     padding: 1.2rem 0rem;
   }
   @media (max-width: 1000px) {
@@ -283,9 +262,6 @@
     grid-template-columns: 1fr;
   } */
   .header{
-    grid-template-columns: 1fr;
-  }
-  .education{
     grid-template-columns: 1fr;
   }
   .schools{
